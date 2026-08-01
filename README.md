@@ -21,7 +21,7 @@ Then visit `http://localhost:8000`.
 5. Select the `main` branch and `/ (root)` folder.
 6. Save. GitHub will provide the live URL.
 
-## What to personalize next
+##  TODO
 
 - Add screenshots or short videos to the project cards.
 - Add links for each paper (DOI, arXiv, or project page).
