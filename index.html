@@ -1,0 +1,367 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Portfolio of Amal Dev Haridevan — autonomous systems engineer and Ph.D. researcher working on robot learning, reinforcement learning, digital twins, and UAV autonomy." />
+  <meta name="theme-color" content="#07131b" />
+  <title>Amal Dev Haridevan | Autonomous Systems Engineer</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Amal Dev Haridevan, home">
+        <span class="brand-mark" aria-hidden="true">AD</span>
+        <span>Amal Dev</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+        <span class="sr-only">Toggle navigation</span>
+        <span></span><span></span><span></span>
+      </button>
+
+      <div class="nav-links" id="nav-links">
+        <a href="#work">Work</a>
+        <a href="#open-source">Open source</a>
+        <a href="#research">Research</a>
+        <a href="#experience">Experience</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+        <button class="theme-toggle" type="button" aria-label="Switch to light theme" title="Toggle colour theme">
+          <span aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero section shell">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Autonomous systems · Robot learning · UAVs</p>
+        <h1>I build autonomy systems that survive contact with <span>physics.</span></h1>
+        <p class="hero-text">
+          I am a Ph.D. researcher at York University working on reinforcement learning,
+          high-performance robotic simulation, digital twins, and efficient sim-to-real
+          transfer for quadrotors.
+        </p>
+        <a class="upstream-proof" href="#open-source" aria-label="View open-source contributions to PyTorch and Gazebo">
+          <span class="proof-label">Merged upstream</span>
+          <strong>Core fixes contributed to PyTorch and Gazebo</strong>
+          <span class="proof-arrow" aria-hidden="true">↘</span>
+        </a>
+        <div class="hero-actions">
+          <a class="button primary" href="#work">Explore my work</a>
+          <a class="button secondary" href="assets/Amaldev-Haridevan-CV.pdf" target="_blank" rel="noopener">View résumé</a>
+        </div>
+        <div class="social-row" aria-label="Professional profiles">
+          <a href="https://github.com/amaldevh" target="_blank" rel="noopener">GitHub ↗</a>
+          <a href="https://www.linkedin.com/in/amaldevhari" target="_blank" rel="noopener">LinkedIn ↗</a>
+          <a href="mailto:haridevanamaldev@gmail.com">Email ↗</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel reveal" aria-label="Selected engineering results">
+        <div class="radar" aria-hidden="true">
+          <span class="ring ring-1"></span>
+          <span class="ring ring-2"></span>
+          <span class="ring ring-3"></span>
+          <span class="scan-line"></span>
+          <span class="drone-dot dot-a"></span>
+          <span class="drone-dot dot-b"></span>
+          <span class="drone-dot dot-c"></span>
+          <span class="radar-label">AUTONOMY<br />STACK</span>
+        </div>
+        <div class="metric-grid">
+          <article>
+            <strong>100k+</strong>
+            <span>simulation steps/sec</span>
+          </article>
+          <article>
+            <strong>&lt;1 ms</strong>
+            <span>policy inference</span>
+          </article>
+          <article>
+            <strong>95%</strong>
+            <span>zero-shot tracking success</span>
+          </article>
+          <article>
+            <strong>4</strong>
+            <span>peer-reviewed publications</span>
+          </article>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section shell" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Selected work</p>
+        <h2>Systems, not just demos.</h2>
+        <p>I work across simulation, learning, controls, perception, and deployment—the awkward places where elegant diagrams meet driver bugs.</p>
+      </div>
+
+      <div class="filter-bar reveal" role="group" aria-label="Filter projects">
+        <button class="filter active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="simulation">Simulation</button>
+        <button class="filter" type="button" data-filter="learning">Robot learning</button>
+        <button class="filter" type="button" data-filter="deployment">Deployment</button>
+        <button class="filter" type="button" data-filter="perception">Perception</button>
+        <button class="filter" type="button" data-filter="open-source">Open source</button>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured reveal" data-category="simulation learning">
+          <div class="project-topline">
+            <span class="project-index">01</span>
+            <span class="project-status">Research platform</span>
+          </div>
+          <h3>GzDRL: vectorized reinforcement-learning simulation</h3>
+          <p>Re-engineered Gazebo's execution model into a scalable synchronous framework for vectorized drone RL environments, exceeding 100,000 simulation steps per second on CPUs.</p>
+          <ul class="tag-list" aria-label="Technologies">
+            <li>Gazebo Harmonic</li><li>C++</li><li>Python</li><li>RL</li><li>Digital twins</li>
+          </ul>
+          <div class="project-visual terminal" aria-hidden="true">
+            <div class="terminal-bar"><span></span><span></span><span></span></div>
+            <pre><code>$ gz_drl train --envs 100
+[sim] synchronous stepping ... ready
+[rl]  throughput: 100,000+ steps/s
+[ctrl] policy loop: stable
+<span class="cursor">█</span></code></pre>
+          </div>
+        </article>
+
+        <article class="project-card reveal" data-category="deployment learning">
+          <div class="project-topline"><span class="project-index">02</span><span class="project-status">Edge deployment</span></div>
+          <h3>Sub-millisecond onboard flight-control inference</h3>
+          <p>Built an ONNX and TensorRT deployment pipeline for PPO flight-control policies on the QDrone2 Jetson Xavier, reaching sub-1 ms inference for real-time onboard control.</p>
+          <ul class="tag-list"><li>PyTorch</li><li>ONNX</li><li>TensorRT</li><li>Jetson</li><li>PPO</li></ul>
+        </article>
+
+        <article class="project-card reveal" data-category="simulation deployment">
+          <div class="project-topline"><span class="project-index">03</span><span class="project-status">Digital twin</span></div>
+          <h3>QDrone2 autonomy stack and Gazebo digital twin</h3>
+          <p>Developed ROS interfaces and a Gazebo Harmonic environment reproducing vehicle dynamics, onboard sensors, and controller behaviour for safe prototyping before physical flight tests.</p>
+          <ul class="tag-list"><li>ROS 2</li><li>Gazebo</li><li>C++</li><li>Control</li><li>UAVs</li></ul>
+        </article>
+
+        <article class="project-card reveal" data-category="perception deployment">
+          <div class="project-topline"><span class="project-index">04</span><span class="project-status">Embedded vision</span></div>
+          <h3>Ghost-DeblurGAN for robotic localization</h3>
+          <p>Co-developed and deployed a lightweight motion-deblurring model operating at 30 Hz on a QCar processor, improving fiducial-marker detection accuracy by 27%.</p>
+          <ul class="tag-list"><li>Computer vision</li><li>GhostNet</li><li>Deblurring</li><li>Edge AI</li></ul>
+          <a class="text-link" href="https://github.com/York-SDCNLab/Ghost-DeblurGAN" target="_blank" rel="noopener">Project repository ↗</a>
+        </article>
+
+        <article class="project-card reveal" data-category="perception deployment">
+          <div class="project-topline"><span class="project-index">05</span><span class="project-status">State estimation</span></div>
+          <h3>Multi-sensor EKF for autonomous flight</h3>
+          <p>Designed a real-time full-state estimator combining IMU measurements, camera-derived ORB visual features, and ranging data for quadrotor autonomy.</p>
+          <ul class="tag-list"><li>EKF</li><li>ORB</li><li>Sensor fusion</li><li>OpenCV</li></ul>
+        </article>
+
+        <article class="project-card open-source-preview reveal" data-category="open-source simulation deployment">
+          <div class="project-topline"><span class="project-index">06</span><span class="project-status merged-status">Merged upstream</span></div>
+          <h3>Core contributions to PyTorch and Gazebo</h3>
+          <p>Contributed tested fixes to two major open-source systems: TorchDynamo's graph cache and Gazebo's embedded Python execution path.</p>
+          <ul class="tag-list"><li>PyTorch</li><li>TorchDynamo</li><li>Gazebo</li><li>C++ / Python</li></ul>
+          <a class="text-link" href="#open-source">Read the contribution details ↓</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section open-source-section" id="open-source">
+      <div class="shell">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Open-source engineering</p>
+          <h2>Fixes that shipped upstream.</h2>
+          <p>These were not isolated patches in private repositories. I diagnosed failures in widely used robotics and machine-learning infrastructure, implemented durable fixes, added regression coverage, and got the changes merged.</p>
+        </div>
+
+        <div class="open-source-grid">
+          <article class="oss-card reveal">
+            <div class="oss-card-header">
+              <div>
+                <span class="oss-repository">pytorch / pytorch</span>
+                <span class="oss-area">TorchDynamo</span>
+              </div>
+              <span class="merge-badge"><span aria-hidden="true">✓</span> Merged upstream</span>
+            </div>
+            <div class="oss-branch" aria-hidden="true">
+              <span class="branch-line"></span>
+              <span class="commit-dot commit-one"></span>
+              <span class="commit-dot commit-two"></span>
+              <span class="commit-label">PR #166554</span>
+            </div>
+            <h3>Correct dynamic handling of 0-D tensors in <code>torch.compile</code></h3>
+            <p>Diagnosed a TorchDynamo graph-caching bug that incorrectly treated scalar tensor values as compile-time constants. Implemented a tensor-aware decomposition and regression tests, restoring correct dynamic behaviour.</p>
+            <div class="oss-impact">
+              <span>Problem</span> Incorrect graph-cache assumptions
+              <span>Fix</span> Tensor-aware decomposition
+              <span>Validation</span> Regression tests
+            </div>
+            <a class="oss-link" href="https://github.com/pytorch/pytorch/pull/166554" target="_blank" rel="noopener">View merged PyTorch pull request <span aria-hidden="true">↗</span></a>
+          </article>
+
+          <article class="oss-card reveal">
+            <div class="oss-card-header">
+              <div>
+                <span class="oss-repository">gazebosim / gz-sim</span>
+                <span class="oss-area">PythonSystemLoader</span>
+              </div>
+              <span class="merge-badge"><span aria-hidden="true">✓</span> Merged upstream</span>
+            </div>
+            <div class="oss-branch" aria-hidden="true">
+              <span class="branch-line"></span>
+              <span class="commit-dot commit-one"></span>
+              <span class="commit-dot commit-two"></span>
+              <span class="commit-label">PR #2618</span>
+            </div>
+            <h3>Reliable Python callback execution inside Gazebo's C++ update loop</h3>
+            <p>Resolved a Python GIL ownership bug by introducing scoped acquisition around <code>PreUpdate</code>, <code>Update</code>, and <code>PostUpdate</code> callbacks, enabling reliable embedded Python system plugins.</p>
+            <div class="oss-impact">
+              <span>Problem</span> Unsafe GIL ownership
+              <span>Fix</span> Scoped callback acquisition
+              <span>Validation</span> Regression tests
+            </div>
+            <a class="oss-link" href="https://github.com/gazebosim/gz-sim/pull/2618" target="_blank" rel="noopener">View merged Gazebo pull request <span aria-hidden="true">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section research-section" id="research">
+      <div class="shell research-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Current research</p>
+          <h2>Efficient adaptation for real-world UAV autonomy.</h2>
+          <p>My Ph.D. focuses on reducing the real-world data required to adapt learned quadrotor policies across visual and dynamic domain shifts.</p>
+        </div>
+
+        <div class="research-map reveal" aria-label="Research pipeline">
+          <article>
+            <span>01</span>
+            <h3>Perception</h3>
+            <p>Visual and language context from onboard sensors.</p>
+          </article>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <article>
+            <span>02</span>
+            <h3>Cross-modal fusion</h3>
+            <p>Joint representations combining vision, language, and proprioception.</p>
+          </article>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <article>
+            <span>03</span>
+            <h3>Policy adaptation</h3>
+            <p>Data-efficient learning under wind, delay, and uncertain dynamics.</p>
+          </article>
+          <div class="pipeline-arrow" aria-hidden="true">→</div>
+          <article>
+            <span>04</span>
+            <h3>Physical validation</h3>
+            <p>Comparison with model-based expert controllers on real quadrotors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section shell" id="experience">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Experience</p>
+        <h2>Research-to-industry, end to end.</h2>
+      </div>
+
+      <div class="timeline">
+        <article class="timeline-item reveal">
+          <div class="timeline-meta"><span>2021 — Present</span><span>Toronto, Canada</span></div>
+          <div>
+            <h3>Graduate Autonomous Systems & Robot Learning Researcher</h3>
+            <p class="organization">SDCNLab · York University</p>
+            <p>Building high-throughput simulation, learned UAV control, state-estimation, and sim-to-real systems.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-meta"><span>2023 — Present</span><span>Toronto, Canada</span></div>
+          <div>
+            <h3>Teaching Assistant</h3>
+            <p class="organization">York University</p>
+            <p>Leading control-systems laboratories and helping students connect theory, experiments, and technical communication.</p>
+          </div>
+        </article>
+
+        <article class="timeline-item reveal">
+          <div class="timeline-meta"><span>2023 — 2025</span><span>Markham, Canada</span></div>
+          <div>
+            <h3>Autonomous Systems Engineering Intern</h3>
+            <p class="organization">Quanser</p>
+            <p>Developed production-facing ROS interfaces, digital twins, embedded vision components, and quadrotor autonomy tooling.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell" id="publications">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Publications</p>
+        <h2>Peer-reviewed work.</h2>
+      </div>
+
+      <div class="publication-list">
+        <article class="publication reveal">
+          <span class="venue">ICRA 2026</span>
+          <div><h3>SEP-NMPC: Safety Enhanced Passivity-Based Nonlinear Model Predictive Control for a UAV Slung Payload System</h3><p>Rezaei, S., Kang, J., Haridevan, A., and Shan, J.</p></div>
+        </article>
+        <article class="publication reveal">
+          <span class="venue">IEEE TIM 2024</span>
+          <div><h3>L-PR: Exploiting LiDAR Fiducial Marker for Unordered Low Overlap Multiview Point Cloud Registration</h3><p>Liu, Y., Shan, J., Haridevan, A., and Zhang, S.</p><a class="text-link" href="https://github.com/yorklyb/L-PR" target="_blank" rel="noopener">Repository ↗</a></div>
+        </article>
+        <article class="publication reveal">
+          <span class="venue">ICUAS 2024</span>
+          <div><h3>ROS2-Gazebo Simulator for Drone Applications</h3><p>Haridevan, A. D., Kang, J., Yuan, M., and Shan, J.</p></div>
+        </article>
+        <article class="publication reveal">
+          <span class="venue">IROS 2022</span>
+          <div><h3>Application of Ghost-DeblurGAN to Fiducial Marker Detection</h3><p>Liu, Y., Haridevan, A., Schofield, H., and Shan, J.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section shell skills-section">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Technical toolkit</p>
+        <h2>Comfortable from equations to executables.</h2>
+      </div>
+      <div class="skills-grid reveal">
+        <article><h3>Languages</h3><p>Python · C++ · MATLAB</p></article>
+        <article><h3>Learning & vision</h3><p>PyTorch · PPO · OpenCV · ONNX · TensorRT</p></article>
+        <article><h3>Robotics</h3><p>ROS 1/2 · Gazebo Harmonic · Isaac Sim · Simulink</p></article>
+        <article><h3>Engineering</h3><p>Linux · Docker · Git · CMake · GDB · Google Cloud</p></article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="shell contact-card reveal">
+        <p class="eyebrow">Let's build something that flies</p>
+        <h2>Open to autonomy, robotics, and research engineering opportunities.</h2>
+        <p>I am especially interested in work involving UAV autonomy, robot learning, reinforcement learning, simulation infrastructure, and real-time deployment.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="mailto:haridevanamaldev@gmail.com">Start a conversation</a>
+          <a class="button secondary" href="assets/Amaldev-Haridevan-CV.pdf" download>Download résumé</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-inner">
+      <p>© <span id="year"></span> Amal Dev Haridevan</p>
+      <p>Designed for clarity. Built without framework-induced emotional damage.</p>
+    </div>
+  </footer>
+</body>
+</html>
